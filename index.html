@@ -35,7 +35,6 @@
     padding: 24px 16px 48px; 
   }
   
-  /* Tournament Professional Styling Header */
   .header { 
     display: flex; 
     align-items: flex-start; 
@@ -53,26 +52,26 @@
   .title { font-size: 28px; font-weight: 800; color: #0f172a; }
   .round-badge { background: #fef08a; color: #854d0e; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; align-self: flex-start; margin-top: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
  
-  /* Tabs */
+  /* Tabs Navigation */
   .tab-bar { display: flex; gap: 8px; margin-bottom: 24px; }
   .tab-btn { padding: 12px 24px; font-size: 14px; font-weight: 600; border: none; background: #ffffff; color: #64748b; cursor: pointer; border-radius: 8px; transition: all .2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
   .tab-btn.active { background: #1e293b; color: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
   .tab-btn:hover:not(.active) { background: #f1f5f9; color: #0f172a; }
+  
+  /* Tab Content Panes */
   .tab-pane { display: none; }
-  .tab-pane.active { display: block; animation: fadeIn 0.3s ease-in-out;}
+  .tab-pane.active { display: block !important; animation: fadeIn 0.3s ease-in-out;}
   @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
  
-  /* Metric cards */
+  /* Dashboard Components */
   .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin-bottom: 32px; }
   .metric-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
   .metric-label { font-size: 13px; font-weight: 600; color: #64748b; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
   .metric-val { font-size: 32px; font-weight: 800; color: #0f172a; }
   .metric-sub { font-size: 12px; color: #94a3b8; margin-top: 4px; font-weight: 500; }
  
-  /* Section title */
   .section-title { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #334155; margin: 0 0 16px; border-bottom: 2px solid #cbd5e1; padding-bottom: 8px; }
  
-  /* Bar chart rows */
   .cat-container { background: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom:32px; }
   .cat-row { display: grid; grid-template-columns: 45px 1fr 80px; align-items: center; gap: 16px; margin-bottom: 12px; }
   .cat-label { font-size: 13px; font-weight: 700; color: #475569; }
@@ -80,67 +79,38 @@
   .bar-fill { height: 100%; border-radius: 6px; transition: width 0.5s ease-out; }
   .cat-pts { font-size: 13px; color: #0f172a; text-align: right; font-weight: 700; }
  
-  /* Top performers */
   .top-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
   .top-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 14px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
   .avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex-shrink: 0; border: 2px solid #f8fafc; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-  .top-name { font-size: 14px; font-weight: 700; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .top-cat { font-size: 12px; color: #64748b; font-weight: 500; }
   .pts-badge { background: #dcfce7; color: #166534; border-radius: 20px; padding: 4px 12px; font-size: 13px; font-weight: 800; margin-left: auto; flex-shrink: 0; border: 1px solid #bbf7d0; }
  
-  /* Filter buttons */
   .cat-filter { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
   .filter-btn { padding: 6px 16px; font-size: 13px; font-weight: 600; border: 1px solid #cbd5e1; border-radius: 20px; background: #ffffff; color: #475569; cursor: pointer; transition: all .2s; }
   .filter-btn.active { background: #0f172a; color: #fff; border-color: #0f172a; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-  .filter-btn:hover:not(.active) { background: #f8fafc; color: #0f172a; }
  
-  /* Player table */
   .table-wrap { overflow-x: auto; background: #ffffff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
   .player-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 600px; }
-  .player-table th { font-size: 12px; font-weight: 700; color: #475569; text-align: left; padding: 14px 16px; border-bottom: 2px solid #e2e8f0; background: #f8fafc; white-space: nowrap; text-transform: uppercase; letter-spacing: 0.05em; }
-  .player-table td { padding: 12px 16px; border-bottom: 1px solid #f1f5f9; color: #1e293b; vertical-align: middle; font-weight: 500; }
-  .player-table tbody tr:hover td { background: #f8fafc; }
+  .player-table th { font-size: 12px; font-weight: 700; color: #475569; text-align: left; padding: 14px 16px; border-bottom: 2px solid #e2e8f0; background: #f8fafc; text-transform: uppercase; }
+  .player-table td { padding: 12px 16px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
   
-  .pip { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 6px; font-size: 12px; font-weight: 800; margin: 0 2px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+  .pip { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 6px; font-size: 12px; font-weight: 800; margin: 0 2px; }
   .pip-w { background: #bbf7d0; color: #166534; border: 1px solid #86efac; }
   .pip-l { background: #fecaca; color: #991b1b; border: 1px solid #fca5a5; }
   .pip-d { background: #e2e8f0; color: #334155; border: 1px solid #cbd5e1; }
   
-  .cat-pill { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 12px; white-space: nowrap; }
+  .cat-pill { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 12px; }
   .pts-cell { font-weight: 800; font-size: 16px; text-align: center; }
  
-  /* Category color pills */
-  .pill-l12 { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
-  .pill-p12 { background: #fef08a; color: #854d0e; border: 1px solid #fde047; }
-  .pill-l15 { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
-  .pill-p15 { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
-  .pill-l18 { background: #fce7f3; color: #9d174d; border: 1px solid #fbcfe8; }
-  .pill-p18 { background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; }
- 
-  /* Pairings */
   .pair-section-title { font-size: 15px; font-weight: 800; color: #1e293b; margin: 24px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #cbd5e1; }
-  .pair-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 12px; margin-bottom: 8px; }
-  .pair-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.2s; }
-  .pair-card:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-  .pair-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-  .board-pill { font-size: 12px; color: #475569; background: #f1f5f9; padding: 4px 12px; border-radius: 12px; font-weight: 700; border: 1px solid #e2e8f0; }
-  .pair-players { display: flex; align-items: center; gap: 8px; font-size: 14px; flex-wrap: wrap; }
-  .pair-vs { font-size: 12px; color: #94a3b8; font-weight: 700; text-transform: uppercase; }
-  
-  .color-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; flex-shrink: 0; box-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+  .pair-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 12px; }
+  .pair-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .color-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
   .white-dot { background: #ffffff; border: 2px solid #cbd5e1; }
   .black-dot { background: #1e293b; border: 2px solid #0f172a; }
   
   .player-name-bold { font-weight: 800; color: #0f172a; }
-  .opp-name { color: #475569; font-weight: 600; }
-  .opp-dist { font-size: 12px; color: #64748b; font-weight: 700; }
-  .derby-tag { font-size: 11px; background: #fef08a; color: #854d0e; padding: 2px 8px; border-radius: 8px; font-weight: 800; text-transform: uppercase; border: 1px solid #fde047; }
+  .derby-tag { font-size: 11px; background: #fef08a; color: #854d0e; padding: 2px 8px; border-radius: 8px; font-weight: 800; text-transform: uppercase; }
  
-  /* Legend */
-  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; font-size: 13px; color: #475569; font-weight: 600; background: #ffffff; padding: 12px 16px; border-radius: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-  .legend-item { display: flex; align-items: center; gap: 8px; }
- 
-  /* Footer */
   .footer { margin-top: 48px; padding-top: 20px; border-top: 2px solid #cbd5e1; font-size: 12px; color: #64748b; text-align: center; font-weight: 600; }
 </style>
 </head>
@@ -175,46 +145,12 @@
  
     <p class="section-title">Category Performance (Points after 6 rounds)</p>
     <div class="cat-container">
-      <div class="cat-row">
-        <span class="cat-label">L12</span>
-        <div class="bar-track"><div class="bar-fill" style="width:62.5%;background:#3b82f6"></div></div>
-        <span class="cat-pts">15.0 / 24</span>
-      </div>
-      <div class="cat-row">
-        <span class="cat-label">P15</span>
-        <div class="bar-track"><div class="bar-fill" style="width:62.5%;background:#10b981"></div></div>
-        <span class="cat-pts">15.0 / 24</span>
-      </div>
-      <div class="cat-row">
-        <span class="cat-label">P18</span>
-        <div class="bar-track"><div class="bar-fill" style="width:52.0%;background:#8b5cf6"></div></div>
-        <span class="cat-pts">12.5 / 24</span>
-      </div>
-      <div class="cat-row">
-        <span class="cat-label">L18</span>
-        <div class="bar-track"><div class="bar-fill" style="width:48.0%;background:#ec4899"></div></div>
-        <span class="cat-pts">11.5 / 24</span>
-      </div>
-      <div class="cat-row">
-        <span class="cat-label">L15</span>
-        <div class="bar-track"><div class="bar-fill" style="width:42.0%;background:#64748b"></div></div>
-        <span class="cat-pts">10.0 / 24</span>
-      </div>
-      <div class="cat-row">
-        <span class="cat-label">P12</span>
-        <div class="bar-track"><div class="bar-fill" style="width:37.5%;background:#f59e0b"></div></div>
-        <span class="cat-pts">9.0 / 24</span>
-      </div>
-    </div>
- 
-    <p class="section-title">Top Performers</p>
-    <div class="top-grid">
-      <div class="top-card"><div class="avatar" style="background:#dbeafe;color:#1e40af">AZ</div><div style="flex:1;min-width:0"><p class="top-name">Amsyar Ziqri</p><p class="top-cat">L12</p></div><span class="pts-badge">5.0 pts</span></div>
-      <div class="top-card"><div class="avatar" style="background:#dcfce7;color:#166534">NA</div><div style="flex:1;min-width:0"><p class="top-name">Nur Ain Bt Shahar</p><p class="top-cat">P15</p></div><span class="pts-badge">4.5 pts</span></div>
-      <div class="top-card"><div class="avatar" style="background:#dbeafe;color:#1e40af">LV</div><div style="flex:1;min-width:0"><p class="top-name">Logitan Vijayan</p><p class="top-cat">L12</p></div><span class="pts-badge">4.5 pts</span></div>
-      <div class="top-card"><div class="avatar" style="background:#fce7f3;color:#9d174d">RM</div><div style="flex:1;min-width:0"><p class="top-name">Ridzwan Md Anim</p><p class="top-cat">L18</p></div><span class="pts-badge">4.0 pts</span></div>
-      <div class="top-card"><div class="avatar" style="background:#dcfce7;color:#166534">AH</div><div style="flex:1;min-width:0"><p class="top-name">Aimy Humairah</p><p class="top-cat">P15</p></div><span class="pts-badge">4.0 pts</span></div>
-      <div class="top-card"><div class="avatar" style="background:#fef08a;color:#854d0e">NA</div><div style="flex:1;min-width:0"><p class="top-name">Nur Aliya Alisya</p><p class="top-cat">P12</p></div><span class="pts-badge">4.0 pts</span></div>
+      <div class="cat-row"><span class="cat-label">L12</span><div class="bar-track"><div class="bar-fill" style="width:62.5%;background:#3b82f6"></div></div><span class="cat-pts">15.0 / 24</span></div>
+      <div class="cat-row"><span class="cat-label">P15</span><div class="bar-track"><div class="bar-fill" style="width:62.5%;background:#10b981"></div></div><span class="cat-pts">15.0 / 24</span></div>
+      <div class="cat-row"><span class="cat-label">P18</span><div class="bar-track"><div class="bar-fill" style="width:52.0%;background:#8b5cf6"></div></div><span class="cat-pts">12.5 / 24</span></div>
+      <div class="cat-row"><span class="cat-label">L18</span><div class="bar-track"><div class="bar-fill" style="width:48.0%;background:#ec4899"></div></div><span class="cat-pts">11.5 / 24</span></div>
+      <div class="cat-row"><span class="cat-label">L15</span><div class="bar-track"><div class="bar-fill" style="width:42.0%;background:#64748b"></div></div><span class="cat-pts">10.0 / 24</span></div>
+      <div class="cat-row"><span class="cat-label">P12</span><div class="bar-track"><div class="bar-fill" style="width:37.5%;background:#f59e0b"></div></div><span class="cat-pts">9.0 / 24</span></div>
     </div>
   </div>
  
@@ -228,32 +164,75 @@
       <button class="filter-btn" onclick="filterPlayers('L18',this)">L18</button>
       <button class="filter-btn" onclick="filterPlayers('P18',this)">P18</button>
     </div>
-    <div class="legend">
-      <span class="legend-item"><span class="pip pip-w">W</span> Win</span>
-      <span class="legend-item"><span class="pip pip-l">L</span> Loss</span>
-      <span class="legend-item"><span class="pip pip-d">D</span> Draw</span>
-    </div>
     <div class="table-wrap">
     <table class="player-table" id="player-table">
       <thead>
-        <tr>
-          <th>Player</th>
-          <th>Cat</th>
-          <th>R1</th><th>R2</th><th>R3</th><th>R4</th><th>R5</th><th>R6</th>
-          <th>Pts</th>
-        </tr>
+        <tr><th>Player</th><th>Cat</th><th>R1</th><th>R2</th><th>R3</th><th>R4</th><th>R5</th><th>R6</th><th>Pts</th></tr>
       </thead>
       <tbody>
-        <tr data-cat="L12"><td>Amsyar Ziqri Bin Azahadi</td><td><span class="cat-pill pill-l12">L12</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#1e40af">5.0</td></tr>
-        <tr data-cat="L12"><td>Logitan A/L Vijayan</td><td><span class="cat-pill pill-l12">L12</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#1e40af">4.5</td></tr>
-        <tr data-cat="L12"><td>Uwais Aysar Bin Muhaimi</td><td><span class="cat-pill pill-l12">L12</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#1e40af">3.0</td></tr>
-        <tr data-cat="L12"><td>Asri Hafiy Bin Amir Hamzah</td><td><span class="cat-pill pill-l12">L12</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#1e40af">2.5</td></tr>
-        <tr data-cat="P12"><td>Nur Aliya Alisya</td><td><span class="cat-pill pill-p12">P12</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#854d0e">4.0</td></tr>
-        <tr data-cat="P12"><td>Chia Sin Eu</td><td><span class="cat-pill pill-p12">P12</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#854d0e">3.0</td></tr>
-        <tr data-cat="P12"><td>Aqilah Raisya</td><td><span class="cat-pill pill-p12">P12</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#854d0e">2.0</td></tr>
-        <tr data-cat="P12"><td>Aleeya Safiyya</td><td><span class="cat-pill pill-p12">P12</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#854d0e">0.0</td></tr>
-        <tr data-cat="L15"><td>Mikail Bin Kamarulzaman</td><td><span class="cat-pill pill-l15">L15</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#475569">3.0</td></tr>
-        <tr data-cat="L15"><td>Nor Faiq Hakimi</td><td><span class="cat-pill pill-l15">L15</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#475569">2.5</td></tr>
-        <tr data-cat="L15"><td>Danial Haqeem Bin Rashid</td><td><span class="cat-pill pill-l15">L15</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#475569">2.5</td></tr>
-        <tr data-cat="L15"><td>Ilham Hakimi Bin Rajalie</td><td><span class="cat-pill pill-l15">L15</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td class="pts-cell" style="color:#475569">2.0</td></tr>
-        <tr data-cat="P15"><td>Nur Ain Binti Shahar</td><td>
+        <tr data-cat="L12"><td>Amsyar Ziqri Bin Azahadi</td><td><span class="cat-pill" style="background:#dbeafe">L12</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell">5.0</td></tr>
+        <tr data-cat="L12"><td>Logitan A/L Vijayan</td><td><span class="cat-pill" style="background:#dbeafe">L12</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell">4.5</td></tr>
+        <tr data-cat="P15"><td>Nur Ain Binti Shahar</td><td><span class="cat-pill" style="background:#dcfce7">P15</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td class="pts-cell">4.5</td></tr>
+        </tbody>
+    </table>
+    </div>
+  </div>
+ 
+  <div id="tab-pairings" class="tab-pane">
+    <p class="pair-section-title">L12 — Lelaki Bawah 12 (Round 7)</p>
+    <div class="pair-grid">
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill" style="background:#dbeafe">L12</span><span>Board 1</span></div><div class="pair-players"><span class="color-dot black-dot"></span> <span class="player-name-bold">Amsyar Ziqri</span> vs Yang Hong Jie (HLGT)</div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill" style="background:#dbeafe">L12</span><span>Board 2</span></div><div class="pair-players"><span class="color-dot black-dot"></span> <span class="player-name-bold">Logitan Vijayan</span> vs Lee Onn Yusufi (KLANG)</div></div>
+    </div>
+  </div>
+ 
+  <div class="footer">Kontinjen Kuala Selangor Catur MSSS 2026 &nbsp;|&nbsp; Results current as of Round 6</div>
+</div>
+ 
+<script>
+// Main Tab Switching Function
+function switchTab(tabId, btn) {
+  // 1. Hide all tab content
+  const panes = document.getElementsByClassName('tab-pane');
+  for (let i = 0; i < panes.length; i++) {
+    panes[i].classList.remove('active');
+    panes[i].style.display = 'none';
+  }
+
+  // 2. Remove active state from all buttons
+  const buttons = document.getElementsByClassName('tab-btn');
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove('active');
+  }
+
+  // 3. Show the selected tab
+  const target = document.getElementById('tab-' + tabId);
+  if (target) {
+    target.classList.add('active');
+    target.style.display = 'block';
+  }
+
+  // 4. Set current button to active
+  btn.classList.add('active');
+}
+
+// Player Filter Function
+function filterPlayers(cat, btn) {
+  const filterBtns = document.getElementsByClassName('filter-btn');
+  for (let i = 0; i < filterBtns.length; i++) {
+    filterBtns[i].classList.remove('active');
+  }
+  btn.classList.add('active');
+
+  const rows = document.querySelectorAll('#player-table tbody tr');
+  rows.forEach(row => {
+    if (cat === 'all' || row.getAttribute('data-cat') === cat) {
+      row.style.display = '';
+    } else {
+      row.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>
