@@ -1,179 +1,223 @@
-Kslg msss catur 2026 · HTML
-Copy
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MSSS Catur 2026 — Kuala Selangor Contingent</title>
+<title>Kontinjen Kuala Selangor Catur MSSS 2026</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f4f0; color: #1a1a18; line-height: 1.5; }
-  .page { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
-  .header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
-  .header-left { }
-  .eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: #888780; margin-bottom: 4px; }
-  .title { font-size: 26px; font-weight: 600; color: #1a1a18; }
-  .round-badge { background: #faeeda; color: #854f0b; padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; align-self: flex-start; margin-top: 6px; }
+  body { 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); 
+    color: #1e293b; 
+    line-height: 1.5; 
+    min-height: 100vh;
+  }
+  
+  .banner-container {
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  .banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .page { 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 24px 16px 48px; 
+  }
+  
+  /* Tournament Professional Styling Header */
+  .header { 
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: space-between; 
+    margin-bottom: 24px; 
+    flex-wrap: wrap; 
+    gap: 12px; 
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-top: 4px solid #1e293b;
+  }
+  .eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: #64748b; margin-bottom: 4px; font-weight: 700; }
+  .title { font-size: 28px; font-weight: 800; color: #0f172a; }
+  .round-badge { background: #fef08a; color: #854d0e; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; align-self: flex-start; margin-top: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
  
   /* Tabs */
-  .tab-bar { display: flex; gap: 0; border-bottom: 1.5px solid #d3d1c7; margin-bottom: 24px; }
-  .tab-btn { padding: 10px 20px; font-size: 14px; font-weight: 500; border: none; background: transparent; color: #888780; cursor: pointer; border-bottom: 2.5px solid transparent; margin-bottom: -1.5px; transition: color .15s, border-color .15s; }
-  .tab-btn.active { color: #1a1a18; border-bottom-color: #1a1a18; }
-  .tab-btn:hover:not(.active) { color: #444441; }
+  .tab-bar { display: flex; gap: 8px; margin-bottom: 24px; }
+  .tab-btn { padding: 12px 24px; font-size: 14px; font-weight: 600; border: none; background: #ffffff; color: #64748b; cursor: pointer; border-radius: 8px; transition: all .2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+  .tab-btn.active { background: #1e293b; color: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+  .tab-btn:hover:not(.active) { background: #f1f5f9; color: #0f172a; }
   .tab-pane { display: none; }
-  .tab-pane.active { display: block; }
+  .tab-pane.active { display: block; animation: fadeIn 0.3s ease-in-out;}
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
  
   /* Metric cards */
-  .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-bottom: 28px; }
-  .metric-card { background: #fff; border: 0.5px solid #d3d1c7; border-radius: 12px; padding: 14px 16px; }
-  .metric-label { font-size: 12px; color: #888780; margin-bottom: 4px; }
-  .metric-val { font-size: 26px; font-weight: 600; color: #1a1a18; }
-  .metric-sub { font-size: 11px; color: #b4b2a9; margin-top: 2px; }
+  .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin-bottom: 32px; }
+  .metric-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .metric-label { font-size: 13px; font-weight: 600; color: #64748b; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .metric-val { font-size: 32px; font-weight: 800; color: #0f172a; }
+  .metric-sub { font-size: 12px; color: #94a3b8; margin-top: 4px; font-weight: 500; }
  
   /* Section title */
-  .section-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: #888780; margin: 0 0 12px; }
+  .section-title { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #334155; margin: 0 0 16px; border-bottom: 2px solid #cbd5e1; padding-bottom: 8px; }
  
   /* Bar chart rows */
-  .cat-row { display: grid; grid-template-columns: 42px 1fr 70px; align-items: center; gap: 12px; margin-bottom: 10px; }
-  .cat-label { font-size: 12px; font-weight: 600; color: #5f5e5a; }
-  .bar-track { height: 10px; background: #f1efe8; border-radius: 5px; overflow: hidden; }
-  .bar-fill { height: 100%; border-radius: 5px; }
-  .cat-pts { font-size: 12px; color: #1a1a18; text-align: right; font-weight: 600; }
+  .cat-container { background: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom:32px; }
+  .cat-row { display: grid; grid-template-columns: 45px 1fr 80px; align-items: center; gap: 16px; margin-bottom: 12px; }
+  .cat-label { font-size: 13px; font-weight: 700; color: #475569; }
+  .bar-track { height: 12px; background: #f1f5f9; border-radius: 6px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 6px; transition: width 0.5s ease-out; }
+  .cat-pts { font-size: 13px; color: #0f172a; text-align: right; font-weight: 700; }
  
   /* Top performers */
-  .top-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
-  .top-card { background: #fff; border: 0.5px solid #d3d1c7; border-radius: 12px; padding: 12px 14px; display: flex; align-items: center; gap: 12px; }
-  .avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; flex-shrink: 0; }
-  .top-name { font-size: 13px; font-weight: 600; color: #1a1a18; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .top-cat { font-size: 11px; color: #888780; margin-top: 1px; }
-  .pts-badge { background: #e1f5ee; color: #0f6e56; border-radius: 20px; padding: 3px 12px; font-size: 12px; font-weight: 600; margin-left: auto; flex-shrink: 0; }
+  .top-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+  .top-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 14px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+  .avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex-shrink: 0; border: 2px solid #f8fafc; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+  .top-name { font-size: 14px; font-weight: 700; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .top-cat { font-size: 12px; color: #64748b; font-weight: 500; }
+  .pts-badge { background: #dcfce7; color: #166534; border-radius: 20px; padding: 4px 12px; font-size: 13px; font-weight: 800; margin-left: auto; flex-shrink: 0; border: 1px solid #bbf7d0; }
  
   /* Filter buttons */
-  .cat-filter { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
-  .filter-btn { padding: 5px 14px; font-size: 12px; font-weight: 500; border: 1px solid #b4b2a9; border-radius: 20px; background: transparent; color: #5f5e5a; cursor: pointer; transition: all .15s; }
-  .filter-btn.active { background: #1a1a18; color: #fff; border-color: #1a1a18; }
-  .filter-btn:hover:not(.active) { border-color: #5f5e5a; color: #1a1a18; }
+  .cat-filter { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .filter-btn { padding: 6px 16px; font-size: 13px; font-weight: 600; border: 1px solid #cbd5e1; border-radius: 20px; background: #ffffff; color: #475569; cursor: pointer; transition: all .2s; }
+  .filter-btn.active { background: #0f172a; color: #fff; border-color: #0f172a; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+  .filter-btn:hover:not(.active) { background: #f8fafc; color: #0f172a; }
  
   /* Player table */
-  .table-wrap { overflow-x: auto; border: 0.5px solid #d3d1c7; border-radius: 12px; }
-  .player-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 520px; }
-  .player-table th { font-size: 11px; font-weight: 600; color: #888780; text-align: left; padding: 10px 12px; border-bottom: 0.5px solid #d3d1c7; background: #f9f8f5; white-space: nowrap; }
-  .player-table td { padding: 9px 12px; border-bottom: 0.5px solid #f1efe8; color: #1a1a18; vertical-align: middle; }
-  .player-table tbody tr:last-child td { border-bottom: none; }
-  .player-table tbody tr:hover td { background: #f9f8f5; }
-  .pip { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 5px; font-size: 11px; font-weight: 700; margin: 0 1px; }
-  .pip-w { background: #c0dd97; color: #27500a; }
-  .pip-l { background: #f7c1c1; color: #791f1f; }
-  .pip-d { background: #d3d1c7; color: #444441; }
-  .cat-pill { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
-  .pts-cell { font-weight: 700; font-size: 14px; }
+  .table-wrap { overflow-x: auto; background: #ffffff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .player-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 600px; }
+  .player-table th { font-size: 12px; font-weight: 700; color: #475569; text-align: left; padding: 14px 16px; border-bottom: 2px solid #e2e8f0; background: #f8fafc; white-space: nowrap; text-transform: uppercase; letter-spacing: 0.05em; }
+  .player-table td { padding: 12px 16px; border-bottom: 1px solid #f1f5f9; color: #1e293b; vertical-align: middle; font-weight: 500; }
+  .player-table tbody tr:hover td { background: #f8fafc; }
+  
+  .pip { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 6px; font-size: 12px; font-weight: 800; margin: 0 2px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+  .pip-w { background: #bbf7d0; color: #166534; border: 1px solid #86efac; }
+  .pip-l { background: #fecaca; color: #991b1b; border: 1px solid #fca5a5; }
+  .pip-d { background: #e2e8f0; color: #334155; border: 1px solid #cbd5e1; }
+  
+  .cat-pill { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 12px; white-space: nowrap; }
+  .pts-cell { font-weight: 800; font-size: 16px; text-align: center; }
  
   /* Category color pills */
-  .pill-l12 { background: #e6f1fb; color: #185fa5; }
-  .pill-p12 { background: #faeeda; color: #854f0b; }
-  .pill-l15 { background: #f1efe8; color: #5f5e5a; }
-  .pill-p15 { background: #e1f5ee; color: #0f6e56; }
-  .pill-l18 { background: #fbeaf0; color: #72243e; }
-  .pill-p18 { background: #eeedfe; color: #3c3489; }
+  .pill-l12 { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
+  .pill-p12 { background: #fef08a; color: #854d0e; border: 1px solid #fde047; }
+  .pill-l15 { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+  .pill-p15 { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+  .pill-l18 { background: #fce7f3; color: #9d174d; border: 1px solid #fbcfe8; }
+  .pill-p18 { background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; }
  
   /* Pairings */
-  .pair-section-title { font-size: 13px; font-weight: 700; color: #1a1a18; margin: 20px 0 10px; padding-bottom: 6px; border-bottom: 0.5px solid #d3d1c7; }
-  .pair-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 8px; margin-bottom: 4px; }
-  .pair-card { background: #fff; border: 0.5px solid #d3d1c7; border-radius: 12px; padding: 12px 16px; }
-  .pair-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
-  .board-pill { font-size: 11px; color: #888780; background: #f1efe8; padding: 2px 10px; border-radius: 10px; font-weight: 500; }
-  .pair-players { display: flex; align-items: center; gap: 6px; font-size: 13px; flex-wrap: wrap; }
-  .pair-vs { font-size: 11px; color: #b4b2a9; }
-  .color-dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
-  .white-dot { background: #f1efe8; border: 1px solid #888780; }
-  .black-dot { background: #444441; }
-  .player-name-bold { font-weight: 700; color: #1a1a18; }
-  .opp-name { color: #5f5e5a; }
-  .opp-dist { font-size: 11px; color: #b4b2a9; }
-  .derby-tag { font-size: 10px; background: #faeeda; color: #854f0b; padding: 1px 6px; border-radius: 8px; font-weight: 600; }
+  .pair-section-title { font-size: 15px; font-weight: 800; color: #1e293b; margin: 24px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #cbd5e1; }
+  .pair-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 12px; margin-bottom: 8px; }
+  .pair-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.2s; }
+  .pair-card:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+  .pair-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .board-pill { font-size: 12px; color: #475569; background: #f1f5f9; padding: 4px 12px; border-radius: 12px; font-weight: 700; border: 1px solid #e2e8f0; }
+  .pair-players { display: flex; align-items: center; gap: 8px; font-size: 14px; flex-wrap: wrap; }
+  .pair-vs { font-size: 12px; color: #94a3b8; font-weight: 700; text-transform: uppercase; }
+  
+  .color-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; flex-shrink: 0; box-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+  .white-dot { background: #ffffff; border: 2px solid #cbd5e1; }
+  .black-dot { background: #1e293b; border: 2px solid #0f172a; }
+  
+  .player-name-bold { font-weight: 800; color: #0f172a; }
+  .opp-name { color: #475569; font-weight: 600; }
+  .opp-dist { font-size: 12px; color: #64748b; font-weight: 700; }
+  .derby-tag { font-size: 11px; background: #fef08a; color: #854d0e; padding: 2px 8px; border-radius: 8px; font-weight: 800; text-transform: uppercase; border: 1px solid #fde047; }
  
   /* Legend */
-  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; font-size: 12px; color: #5f5e5a; }
-  .legend-item { display: flex; align-items: center; gap: 5px; }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; font-size: 13px; color: #475569; font-weight: 600; background: #ffffff; padding: 12px 16px; border-radius: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
  
   /* Footer */
-  .footer { margin-top: 40px; padding-top: 16px; border-top: 0.5px solid #d3d1c7; font-size: 11px; color: #b4b2a9; text-align: center; }
+  .footer { margin-top: 48px; padding-top: 20px; border-top: 2px solid #cbd5e1; font-size: 12px; color: #64748b; text-align: center; font-weight: 600; }
 </style>
 </head>
 <body>
 <div class="page">
  
+  <div class="banner-container">
+    <img src="C:\Users\user\Downloads\msss banner.jpeg" class="banner-img" alt="MSSS Banner">
+  </div>
+
   <div class="header">
     <div class="header-left">
       <p class="eyebrow">MSSS Catur 2026</p>
-      <p class="title">Kuala Selangor Contingent</p>
+      <p class="title">Kontinjen Kuala Selangor</p>
     </div>
-    <span class="round-badge">After Round 5 &nbsp;|&nbsp; Round 6 Upcoming</span>
+    <span class="round-badge">After Round 6 &nbsp;|&nbsp; Round 7 Upcoming</span>
   </div>
  
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab('overview', this)">Overview</button>
     <button class="tab-btn" onclick="switchTab('players', this)">Players</button>
-    <button class="tab-btn" onclick="switchTab('pairings', this)">Round 6 Pairings</button>
+    <button class="tab-btn" onclick="switchTab('pairings', this)">Round 7 Pairings</button>
   </div>
  
-  <!-- TAB: OVERVIEW -->
   <div id="tab-overview" class="tab-pane active">
     <div class="metric-grid">
       <div class="metric-card"><p class="metric-label">Total players</p><p class="metric-val">24</p><p class="metric-sub">6 age categories</p></div>
-      <div class="metric-card"><p class="metric-label">Team points</p><p class="metric-val">64</p><p class="metric-sub">of 120 possible</p></div>
-      <div class="metric-card"><p class="metric-label">Best category</p><p class="metric-val">P15</p><p class="metric-sub">14 pts of 20</p></div>
-      <div class="metric-card"><p class="metric-label">Rounds played</p><p class="metric-val">5</p><p class="metric-sub">Round 6 next</p></div>
+      <div class="metric-card"><p class="metric-label">Team points</p><p class="metric-val">73.0</p><p class="metric-sub">of 144 possible</p></div>
+      <div class="metric-card"><p class="metric-label">Best category</p><p class="metric-val">L12 & P15</p><p class="metric-sub">15.0 pts each</p></div>
+      <div class="metric-card"><p class="metric-label">Rounds played</p><p class="metric-val">6</p><p class="metric-sub">Round 7 upcoming</p></div>
     </div>
  
-    <p class="section-title" style="margin-bottom:14px">Category performance (points after 5 rounds)</p>
-    <div style="margin-bottom:28px">
-      <div class="cat-row">
-        <span class="cat-label">P15</span>
-        <div class="bar-track"><div class="bar-fill" style="width:70%;background:#1d9e75"></div></div>
-        <span class="cat-pts">14.0 / 20</span>
-      </div>
+    <p class="section-title">Category Performance (Points after 6 rounds)</p>
+    <div class="cat-container">
       <div class="cat-row">
         <span class="cat-label">L12</span>
-        <div class="bar-track"><div class="bar-fill" style="width:65%;background:#378add"></div></div>
-        <span class="cat-pts">13.0 / 20</span>
+        <div class="bar-track"><div class="bar-fill" style="width:62.5%;background:#3b82f6"></div></div>
+        <span class="cat-pts">15.0 / 24</span>
+      </div>
+      <div class="cat-row">
+        <span class="cat-label">P15</span>
+        <div class="bar-track"><div class="bar-fill" style="width:62.5%;background:#10b981"></div></div>
+        <span class="cat-pts">15.0 / 24</span>
       </div>
       <div class="cat-row">
         <span class="cat-label">P18</span>
-        <div class="bar-track"><div class="bar-fill" style="width:52.5%;background:#7f77dd"></div></div>
-        <span class="cat-pts">10.5 / 20</span>
-      </div>
-      <div class="cat-row">
-        <span class="cat-label">P12</span>
-        <div class="bar-track"><div class="bar-fill" style="width:47.5%;background:#ef9f27"></div></div>
-        <span class="cat-pts">9.5 / 20</span>
+        <div class="bar-track"><div class="bar-fill" style="width:52.0%;background:#8b5cf6"></div></div>
+        <span class="cat-pts">12.5 / 24</span>
       </div>
       <div class="cat-row">
         <span class="cat-label">L18</span>
-        <div class="bar-track"><div class="bar-fill" style="width:47.5%;background:#d4537e"></div></div>
-        <span class="cat-pts">9.5 / 20</span>
+        <div class="bar-track"><div class="bar-fill" style="width:48.0%;background:#ec4899"></div></div>
+        <span class="cat-pts">11.5 / 24</span>
       </div>
       <div class="cat-row">
         <span class="cat-label">L15</span>
-        <div class="bar-track"><div class="bar-fill" style="width:37.5%;background:#888780"></div></div>
-        <span class="cat-pts">7.5 / 20</span>
+        <div class="bar-track"><div class="bar-fill" style="width:42.0%;background:#64748b"></div></div>
+        <span class="cat-pts">10.0 / 24</span>
+      </div>
+      <div class="cat-row">
+        <span class="cat-label">P12</span>
+        <div class="bar-track"><div class="bar-fill" style="width:37.5%;background:#f59e0b"></div></div>
+        <span class="cat-pts">9.0 / 24</span>
       </div>
     </div>
  
-    <p class="section-title" style="margin-bottom:14px">Top performers</p>
+    <p class="section-title">Top Performers</p>
     <div class="top-grid">
-      <div class="top-card"><div class="avatar" style="background:#e6f1fb;color:#185fa5">AZ</div><div style="flex:1;min-width:0"><p class="top-name">Amsyar Ziqri</p><p class="top-cat">L12</p></div><span class="pts-badge">4.0 pts</span></div>
-      <div class="top-card"><div class="avatar" style="background:#e1f5ee;color:#0f6e56">NA</div><div style="flex:1;min-width:0"><p class="top-name">Nur Aliya Alisya</p><p class="top-cat">P12</p></div><span class="pts-badge">4.0 pts</span></div>
-      <div class="top-card"><div class="avatar" style="background:#e1f5ee;color:#0f6e56">NA</div><div style="flex:1;min-width:0"><p class="top-name">Nur Ain Bt Shahar</p><p class="top-cat">P15</p></div><span class="pts-badge">4.0 pts</span></div>
-      <div class="top-card"><div class="avatar" style="background:#e6f1fb;color:#185fa5">LV</div><div style="flex:1;min-width:0"><p class="top-name">Logitan Vijayan</p><p class="top-cat">L12</p></div><span class="pts-badge">3.5 pts</span></div>
-      <div class="top-card"><div class="avatar" style="background:#e1f5ee;color:#0f6e56">AH</div><div style="flex:1;min-width:0"><p class="top-name">Aimy Humairah</p><p class="top-cat">P15</p></div><span class="pts-badge">3.5 pts</span></div>
-      <div class="top-card"><div class="avatar" style="background:#e1f5ee;color:#0f6e56">SV</div><div style="flex:1;min-width:0"><p class="top-name">Shanvatana Vijayan</p><p class="top-cat">P15</p></div><span class="pts-badge">3.5 pts</span></div>
+      <div class="top-card"><div class="avatar" style="background:#dbeafe;color:#1e40af">AZ</div><div style="flex:1;min-width:0"><p class="top-name">Amsyar Ziqri</p><p class="top-cat">L12</p></div><span class="pts-badge">5.0 pts</span></div>
+      <div class="top-card"><div class="avatar" style="background:#dcfce7;color:#166534">NA</div><div style="flex:1;min-width:0"><p class="top-name">Nur Ain Bt Shahar</p><p class="top-cat">P15</p></div><span class="pts-badge">4.5 pts</span></div>
+      <div class="top-card"><div class="avatar" style="background:#dbeafe;color:#1e40af">LV</div><div style="flex:1;min-width:0"><p class="top-name">Logitan Vijayan</p><p class="top-cat">L12</p></div><span class="pts-badge">4.5 pts</span></div>
+      <div class="top-card"><div class="avatar" style="background:#fce7f3;color:#9d174d">RM</div><div style="flex:1;min-width:0"><p class="top-name">Ridzwan Md Anim</p><p class="top-cat">L18</p></div><span class="pts-badge">4.0 pts</span></div>
+      <div class="top-card"><div class="avatar" style="background:#dcfce7;color:#166534">AH</div><div style="flex:1;min-width:0"><p class="top-name">Aimy Humairah</p><p class="top-cat">P15</p></div><span class="pts-badge">4.0 pts</span></div>
+      <div class="top-card"><div class="avatar" style="background:#fef08a;color:#854d0e">NA</div><div style="flex:1;min-width:0"><p class="top-name">Nur Aliya Alisya</p><p class="top-cat">P12</p></div><span class="pts-badge">4.0 pts</span></div>
     </div>
   </div>
  
-  <!-- TAB: PLAYERS -->
   <div id="tab-players" class="tab-pane">
     <div class="cat-filter">
       <button class="filter-btn active" onclick="filterPlayers('all',this)">All (24)</button>
@@ -185,9 +229,9 @@ Copy
       <button class="filter-btn" onclick="filterPlayers('P18',this)">P18</button>
     </div>
     <div class="legend">
-      <span class="legend-item"><span class="pip pip-w" style="width:16px;height:16px;font-size:9px">W</span> Win</span>
-      <span class="legend-item"><span class="pip pip-l" style="width:16px;height:16px;font-size:9px">L</span> Loss</span>
-      <span class="legend-item"><span class="pip pip-d" style="width:16px;height:16px;font-size:9px">D</span> Draw</span>
+      <span class="legend-item"><span class="pip pip-w">W</span> Win</span>
+      <span class="legend-item"><span class="pip pip-l">L</span> Loss</span>
+      <span class="legend-item"><span class="pip pip-d">D</span> Draw</span>
     </div>
     <div class="table-wrap">
     <table class="player-table" id="player-table">
@@ -195,99 +239,92 @@ Copy
         <tr>
           <th>Player</th>
           <th>Cat</th>
-          <th>R1</th><th>R2</th><th>R3</th><th>R4</th><th>R5</th>
+          <th>R1</th><th>R2</th><th>R3</th><th>R4</th><th>R5</th><th>R6</th>
           <th>Pts</th>
         </tr>
       </thead>
       <tbody>
-        <!-- L12 -->
-        <tr data-cat="L12"><td>Amsyar Ziqri Bin Azahadi</td><td><span class="cat-pill pill-l12">L12</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#185fa5">4.0</td></tr>
-        <tr data-cat="L12"><td>Logitan A/L Vijayan</td><td><span class="cat-pill pill-l12">L12</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td class="pts-cell" style="color:#185fa5">3.5</td></tr>
-        <tr data-cat="L12"><td>Uwais Aysar Bin Muhaimi</td><td><span class="cat-pill pill-l12">L12</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td class="pts-cell" style="color:#185fa5">3.0</td></tr>
-        <tr data-cat="L12"><td>Asri Hafiy Bin Amir Hamzah</td><td><span class="cat-pill pill-l12">L12</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#185fa5">2.5</td></tr>
-        <!-- P12 -->
-        <tr data-cat="P12"><td>Nur Aliya Alisya</td><td><span class="cat-pill pill-p12">P12</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#854f0b">4.0</td></tr>
-        <tr data-cat="P12"><td>Chia Sin Eu</td><td><span class="cat-pill pill-p12">P12</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#854f0b">3.0</td></tr>
-        <tr data-cat="P12"><td>Aqilah Raisya</td><td><span class="cat-pill pill-p12">P12</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#854f0b">2.0</td></tr>
-        <tr data-cat="P12"><td>Aleeya Safiyya</td><td><span class="cat-pill pill-p12">P12</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#854f0b">0.5</td></tr>
-        <!-- L15 -->
-        <tr data-cat="L15"><td>Danial Haqeem Bin Rashid</td><td><span class="cat-pill pill-l15">L15</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#5f5e5a">2.5</td></tr>
-        <tr data-cat="L15"><td>Mikail Bin Kamarulzaman</td><td><span class="cat-pill pill-l15">L15</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#5f5e5a">2.0</td></tr>
-        <tr data-cat="L15"><td>Ilham Hakimi Bin Rajalie</td><td><span class="cat-pill pill-l15">L15</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#5f5e5a">1.5</td></tr>
-        <tr data-cat="L15"><td>Nor Faiq Hakimi</td><td><span class="cat-pill pill-l15">L15</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#5f5e5a">1.5</td></tr>
-        <!-- P15 -->
-        <tr data-cat="P15"><td>Nur Ain Binti Shahar</td><td><span class="cat-pill pill-p15">P15</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#0f6e56">4.0</td></tr>
-        <tr data-cat="P15"><td>Aimy Humairah</td><td><span class="cat-pill pill-p15">P15</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td class="pts-cell" style="color:#0f6e56">3.5</td></tr>
-        <tr data-cat="P15"><td>Shanvatana A/P Vijayan</td><td><span class="cat-pill pill-p15">P15</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#0f6e56">3.5</td></tr>
-        <tr data-cat="P15"><td>Nur Aira Amani</td><td><span class="cat-pill pill-p15">P15</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#0f6e56">3.0</td></tr>
-        <!-- L18 -->
-        <tr data-cat="L18"><td>Amir Haikal B Amir Rizza</td><td><span class="cat-pill pill-l18">L18</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-d">D</span></td><td class="pts-cell" style="color:#72243e">3.0</td></tr>
-        <tr data-cat="L18"><td>Ridzwan Bin Mohamad Anim</td><td><span class="cat-pill pill-l18">L18</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#72243e">3.0</td></tr>
-        <tr data-cat="L18"><td>Megat Musa Bin Megat Mohd</td><td><span class="cat-pill pill-l18">L18</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#72243e">2.0</td></tr>
-        <tr data-cat="L18"><td>Arman Hakimi Bin Jeffri</td><td><span class="cat-pill pill-l18">L18</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#72243e">1.5</td></tr>
-        <!-- P18 -->
-        <tr data-cat="P18"><td>Ayra Rose Binti Mohd Hafiz</td><td><span class="cat-pill pill-p18">P18</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#3c3489">3.0</td></tr>
-        <tr data-cat="P18"><td>Dania Aisya Bt Azrul Nahar</td><td><span class="cat-pill pill-p18">P18</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#3c3489">3.0</td></tr>
-        <tr data-cat="P18"><td>Aliya Ain Insyirah</td><td><span class="cat-pill pill-p18">P18</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#3c3489">2.5</td></tr>
-        <tr data-cat="P18"><td>Tengku Aleesa Sofia</td><td><span class="cat-pill pill-p18">P18</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#3c3489">2.0</td></tr>
+        <tr data-cat="L12"><td>Amsyar Ziqri Bin Azahadi</td><td><span class="cat-pill pill-l12">L12</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#1e40af">5.0</td></tr>
+        <tr data-cat="L12"><td>Logitan A/L Vijayan</td><td><span class="cat-pill pill-l12">L12</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#1e40af">4.5</td></tr>
+        <tr data-cat="L12"><td>Uwais Aysar Bin Muhaimi</td><td><span class="cat-pill pill-l12">L12</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#1e40af">3.0</td></tr>
+        <tr data-cat="L12"><td>Asri Hafiy Bin Amir Hamzah</td><td><span class="cat-pill pill-l12">L12</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#1e40af">2.5</td></tr>
+        <tr data-cat="P12"><td>Nur Aliya Alisya</td><td><span class="cat-pill pill-p12">P12</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#854d0e">4.0</td></tr>
+        <tr data-cat="P12"><td>Chia Sin Eu</td><td><span class="cat-pill pill-p12">P12</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#854d0e">3.0</td></tr>
+        <tr data-cat="P12"><td>Aqilah Raisya</td><td><span class="cat-pill pill-p12">P12</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#854d0e">2.0</td></tr>
+        <tr data-cat="P12"><td>Aleeya Safiyya</td><td><span class="cat-pill pill-p12">P12</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#854d0e">0.0</td></tr>
+        <tr data-cat="L15"><td>Mikail Bin Kamarulzaman</td><td><span class="cat-pill pill-l15">L15</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#475569">3.0</td></tr>
+        <tr data-cat="L15"><td>Nor Faiq Hakimi</td><td><span class="cat-pill pill-l15">L15</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#475569">2.5</td></tr>
+        <tr data-cat="L15"><td>Danial Haqeem Bin Rashid</td><td><span class="cat-pill pill-l15">L15</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#475569">2.5</td></tr>
+        <tr data-cat="L15"><td>Ilham Hakimi Bin Rajalie</td><td><span class="cat-pill pill-l15">L15</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td class="pts-cell" style="color:#475569">2.0</td></tr>
+        <tr data-cat="P15"><td>Nur Ain Binti Shahar</td><td><span class="cat-pill pill-p15">P15</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td class="pts-cell" style="color:#166534">4.5</td></tr>
+        <tr data-cat="P15"><td>Aimy Humairah</td><td><span class="cat-pill pill-p15">P15</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-d">D</span></td><td class="pts-cell" style="color:#166534">4.0</td></tr>
+        <tr data-cat="P15"><td>Shanvatana A/P Vijayan</td><td><span class="cat-pill pill-p15">P15</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#166534">3.5</td></tr>
+        <tr data-cat="P15"><td>Nur Aira Amani</td><td><span class="cat-pill pill-p15">P15</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#166534">3.0</td></tr>
+        <tr data-cat="L18"><td>Ridzwan Bin Mohamad Anim</td><td><span class="cat-pill pill-l18">L18</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#9d174d">4.0</td></tr>
+        <tr data-cat="L18"><td>Amir Haikal B Amir Rizza</td><td><span class="cat-pill pill-l18">L18</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#9d174d">3.0</td></tr>
+        <tr data-cat="L18"><td>Arman Hakimi Bin Jeffri</td><td><span class="cat-pill pill-l18">L18</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#9d174d">2.5</td></tr>
+        <tr data-cat="L18"><td>Megat Musa Bin Megat Mohd</td><td><span class="cat-pill pill-l18">L18</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#9d174d">2.0</td></tr>
+        <tr data-cat="P18"><td>Tengku Aleesa Sofia</td><td><span class="cat-pill pill-p18">P18</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td class="pts-cell" style="color:#3730a3">3.5</td></tr>
+        <tr data-cat="P18"><td>Aliya Ain Insyirah</td><td><span class="cat-pill pill-p18">P18</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-d">D</span></td><td class="pts-cell" style="color:#3730a3">3.0</td></tr>
+        <tr data-cat="P18"><td>Ayra Rose Binti Mohd Hafiz</td><td><span class="cat-pill pill-p18">P18</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#3730a3">3.0</td></tr>
+        <tr data-cat="P18"><td>Dania Aisya Bt Azrul Nahar</td><td><span class="cat-pill pill-p18">P18</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td><span class="pip pip-w">W</span></td><td><span class="pip pip-l">L</span></td><td class="pts-cell" style="color:#3730a3">3.0</td></tr>
       </tbody>
     </table>
     </div>
   </div>
  
-  <!-- TAB: PAIRINGS -->
   <div id="tab-pairings" class="tab-pane">
-    <p style="font-size:13px;color:#5f5e5a;margin-bottom:16px">KSLG player names are in <strong>bold</strong>. Board colour indicates piece colour (&#x25CB; White / &#x25CF; Black).</p>
+    <p style="font-size:14px;color:#475569;margin-bottom:20px;background:#ffffff;padding:12px 16px;border-radius:8px;border-left:4px solid #3b82f6;box-shadow:0 1px 2px rgba(0,0,0,0.05);">KSLG player names are in <strong>bold</strong>. Board colour indicates piece colour (<span class="color-dot white-dot"></span> White / <span class="color-dot black-dot"></span> Black).</p>
  
     <p class="pair-section-title">L12 — Lelaki Bawah 12</p>
     <div class="pair-grid">
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l12">L12</span><span class="board-pill">Board 2</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Amsyar Ziqri</span><span class="pair-vs">vs</span><span class="opp-name">Harinesh Yuvaraj</span><span class="opp-dist">(PPER)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l12">L12</span><span class="board-pill">Board 3</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Logitan Vijayan</span><span class="pair-vs">vs</span><span class="opp-name">Kensei Gokita</span><span class="opp-dist">(PPER)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l12">L12</span><span class="board-pill">Board 7</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Uwais Aysar</span><span class="pair-vs">vs</span><span class="opp-name">Uwaiz Aamir</span><span class="opp-dist">(GBK)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l12">L12</span><span class="board-pill">Board 9</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Asri Hafiy</span><span class="pair-vs">vs</span><span class="opp-name">Choo Yi Sheng</span><span class="opp-dist">(KLGT)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l12">L12</span><span class="board-pill">Board 1</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Amsyar Ziqri</span><span class="pair-vs">vs</span><span class="opp-name">Yang Hong Jie</span><span class="opp-dist">(HLGT)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l12">L12</span><span class="board-pill">Board 2</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Logitan Vijayan</span><span class="pair-vs">vs</span><span class="opp-name">Lee Onn Yusufi</span><span class="opp-dist">(KLANG)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l12">L12</span><span class="board-pill">Board 10</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Uwais Aysar</span><span class="pair-vs">vs</span><span class="opp-name">Muhd Aliff Zafri</span><span class="opp-dist">(KLGT)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l12">L12</span><span class="board-pill">Board 13</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Asri Hafiy</span><span class="pair-vs">vs</span><span class="opp-name">Tan Wei Ren</span><span class="opp-dist">(HLGT)</span></div></div>
     </div>
  
     <p class="pair-section-title">P12 — Perempuan Bawah 12</p>
     <div class="pair-grid">
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p12">P12</span><span class="board-pill">Board 2</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Nur Aliya Alisya</span><span class="pair-vs">vs</span><span class="opp-name">Ashreeya Rao</span><span class="opp-dist">(PPER)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p12">P12</span><span class="board-pill">Board 6</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Chia Sin Eu</span><span class="pair-vs">vs</span><span class="opp-name">Raisa Bt Mohsen</span><span class="opp-dist">(HLGT)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p12">P12</span><span class="board-pill">Board 14</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Aqilah Raisya</span><span class="pair-vs">vs</span><span class="opp-name">Nur Alisha Qaisara</span><span class="opp-dist">(GBK)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p12">P12</span><span class="board-pill">Board 20</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Aleeya Safiyya</span><span class="pair-vs">vs</span><span class="opp-name">Raeesa Kaylaa</span><span class="opp-dist">(Sep)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p12">P12</span><span class="board-pill">Board 3</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Nur Aliya Alisya</span><span class="pair-vs">vs</span><span class="opp-name">Kaaviya</span><span class="opp-dist">(HSEL)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p12">P12</span><span class="board-pill">Board 11</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Chia Sin Eu</span><span class="pair-vs">vs</span><span class="opp-name">Nevedha Kalidoss</span><span class="opp-dist">(PUTA)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p12">P12</span><span class="board-pill">Board 15</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Aqilah Raisya</span><span class="pair-vs">vs</span><span class="opp-name">Raeesa Kaylaa</span><span class="opp-dist">(SEP)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p12">P12</span><span class="board-pill">Board 20</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Aleeya Safiyya</span><span class="pair-vs">vs</span><span class="opp-name">Fariesha Umairah</span><span class="opp-dist">(SBER)</span></div></div>
     </div>
  
     <p class="pair-section-title">L15 — Lelaki Bawah 15</p>
     <div class="pair-grid">
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l15">L15</span><span class="board-pill">Board 10</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Danial Haqeem</span><span class="pair-vs">vs</span><span class="opp-name">Melvin</span><span class="opp-dist">(HSEL)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l15">L15</span><span class="board-pill">Board 14</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Mikail Kamarulzaman</span><span class="pair-vs">vs</span><span class="opp-name">Harith Haikal</span><span class="opp-dist">(Sep)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l15">L15</span><span class="board-pill">Board 17</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Nor Faiq Hakimi</span><span class="pair-vs">vs</span><span class="opp-name">Bee Jun Hao</span><span class="opp-dist">(SBER)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l15">L15</span><span class="board-pill">Board 18</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Ilham Hakimi</span><span class="pair-vs">vs</span><span class="opp-name">Woo Sheng Chang</span><span class="opp-dist">(GBK)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l15">L15</span><span class="board-pill">Board 11</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Mikail Kamarulzaman</span><span class="pair-vs">vs</span><span class="opp-name">Lavinsh</span><span class="opp-dist">(GBK)</span></div></div>
+      <div class="pair-card" style="border: 2px solid #fde047; background:#fefce8;"><div class="pair-header"><span class="cat-pill pill-l15">L15</span><span class="board-pill">Board 13</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Ilham Hakimi</span><span class="pair-vs">vs</span><span class="player-name-bold">Danial Haqeem</span><span class="derby-tag">KSLG derby</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l15">L15</span><span class="board-pill">Board 14</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Nor Faiq Hakimi</span><span class="pair-vs">vs</span><span class="opp-name">Thivyian M Poobalan</span><span class="opp-dist">(PPER)</span></div></div>
     </div>
  
     <p class="pair-section-title">P15 — Perempuan Bawah 15</p>
     <div class="pair-grid">
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p15">P15</span><span class="board-pill">Board 1</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Nur Ain Bt Shahar</span><span class="pair-vs">vs</span><span class="opp-name">Aimee Wang</span><span class="opp-dist">(PUTA)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p15">P15</span><span class="board-pill">Board 4</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Aimy Humairah</span><span class="pair-vs">vs</span><span class="opp-name">Shashmitaah</span><span class="opp-dist">(Klg)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p15">P15</span><span class="board-pill">Board 5</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Shanvatana Vijayan</span><span class="pair-vs">vs</span><span class="opp-name">Nikasha</span><span class="opp-dist">(PPER)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p15">P15</span><span class="board-pill">Board 10</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Nur Aira Amani</span><span class="pair-vs">vs</span><span class="opp-name">Halfa Sofea</span><span class="opp-dist">(PPER)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p15">P15</span><span class="board-pill">Board 2</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Nur Ain Bt Shahar</span><span class="pair-vs">vs</span><span class="opp-name">Ang Jou Ching</span><span class="opp-dist">(HLGT)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p15">P15</span><span class="board-pill">Board 5</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Aimy Humairah</span><span class="pair-vs">vs</span><span class="opp-name">Heng Xiang Qing Elizabeth</span><span class="opp-dist">(PUTA)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p15">P15</span><span class="board-pill">Board 8</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Shanvatana Vijayan</span><span class="pair-vs">vs</span><span class="opp-name">Nur Dalisa Balqis</span><span class="opp-dist">(SEP)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p15">P15</span><span class="board-pill">Board 10</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Nur Aira Amani</span><span class="pair-vs">vs</span><span class="opp-name">Low Hwei Kun</span><span class="opp-dist">(PUTA)</span></div></div>
     </div>
  
     <p class="pair-section-title">L18 — Lelaki Bawah 18</p>
     <div class="pair-grid">
-      <div class="pair-card" style="border-color:#fac775"><div class="pair-header"><span class="cat-pill pill-l18">L18</span><span class="board-pill">Board 7</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Amir Haikal</span><span class="pair-vs">vs</span><span class="player-name-bold">Ridzwan Md Anim</span><span class="derby-tag">KSLG derby</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l18">L18</span><span class="board-pill">Board 13</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Megat Musa</span><span class="pair-vs">vs</span><span class="opp-name">Khairul Rafi</span><span class="opp-dist">(HSEL)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l18">L18</span><span class="board-pill">Board 17</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Arman Hakimi</span><span class="pair-vs">vs</span><span class="opp-name">M. Syamil</span><span class="opp-dist">(SBER)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l18">L18</span><span class="board-pill">Board 5</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Ridzwan Md Anim</span><span class="pair-vs">vs</span><span class="opp-name">Kisshore A/L R.Ashockumar</span><span class="opp-dist">(KLANG)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l18">L18</span><span class="board-pill">Board 11</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Amir Haikal</span><span class="pair-vs">vs</span><span class="opp-name">Khairul Rafi'</span><span class="opp-dist">(HSEL)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l18">L18</span><span class="board-pill">Board 13</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Arman Hakimi</span><span class="pair-vs">vs</span><span class="opp-name">Aiman Hakimi</span><span class="opp-dist">(SBER)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-l18">L18</span><span class="board-pill">Board 19</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Megat Musa</span><span class="pair-vs">vs</span><span class="opp-name">Abdul Hakim</span><span class="opp-dist">(SEP)</span></div></div>
     </div>
  
     <p class="pair-section-title">P18 — Perempuan Bawah 18</p>
     <div class="pair-grid">
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p18">P18</span><span class="board-pill">Board 7</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Ayra Rose Md Hafiz</span><span class="pair-vs">vs</span><span class="opp-name">Jivietha</span><span class="opp-dist">(PPER)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p18">P18</span><span class="board-pill">Board 8</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Dania Aisya Azrul</span><span class="pair-vs">vs</span><span class="opp-name">Yam Wen Jun</span><span class="opp-dist">(HLGT)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p18">P18</span><span class="board-pill">Board 10</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Aliya Ain Insyirah</span><span class="pair-vs">vs</span><span class="opp-name">Nurbalqis Sufiya</span><span class="opp-dist">(GBK)</span></div></div>
-      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p18">P18</span><span class="board-pill">Board 11</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Tengku Aleesa Sofia</span><span class="pair-vs">vs</span><span class="opp-name">Nur Amirah</span><span class="opp-dist">(KLGT)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p18">P18</span><span class="board-pill">Board 8</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Tengku Aleesa Sofia</span><span class="pair-vs">vs</span><span class="opp-name">Wan Poh Yee</span><span class="opp-dist">(PUTA)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p18">P18</span><span class="board-pill">Board 9</span></div><div class="pair-players"><span class="color-dot white-dot"></span><span class="player-name-bold">Aliya Ain Insyirah</span><span class="pair-vs">vs</span><span class="opp-name">Nur Amirah</span><span class="opp-dist">(KLGT)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p18">P18</span><span class="board-pill">Board 10</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Ayra Rose Md Hafiz</span><span class="pair-vs">vs</span><span class="opp-name">Sivaanni</span><span class="opp-dist">(KLGT)</span></div></div>
+      <div class="pair-card"><div class="pair-header"><span class="cat-pill pill-p18">P18</span><span class="board-pill">Board 11</span></div><div class="pair-players"><span class="color-dot black-dot"></span><span class="player-name-bold">Dania Aisya Azrul</span><span class="pair-vs">vs</span><span class="opp-name">Lyshabell Lyrissa Luke</span><span class="opp-dist">(GBK)</span></div></div>
     </div>
   </div>
  
-  <div class="footer">MSSS Catur 2026 &nbsp;|&nbsp; Kuala Selangor Contingent &nbsp;|&nbsp; Results current as of Round 5</div>
+  <div class="footer">Kontinjen Kuala Selangor Catur MSSS 2026 &nbsp;|&nbsp; Results current as of Round 6</div>
 </div>
  
 <script>
